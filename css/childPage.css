@@ -49,9 +49,33 @@ a{
 .commo_info{
 	float:left;
 }
-.big_img{
+
+#small{
 	width: 420px;
-	height:420px;
+	height: 420px;
+	border:1px solid red;
+	position: relative;
+	/*background: url(../img/nianhuo01.png) no-repeat;*/
+	background-size:420px 420px; 
+}
+#big{
+	width: 420px;
+	height: 420px;
+	border:1px solid red;
+	position: absolute;
+	left:445px;
+	top:0px;
+	background: url(../img/nianhuo01.png) no-repeat;
+	background-size:840px 840px; 
+	display: none;
+} 
+#mask{
+	width: 210px;
+	height: 210px;
+	position: absolute;
+	background: black;
+	opacity: 0.3;
+	display: none;
 }
 .commo_info_img{
     float: left;
@@ -65,8 +89,8 @@ a{
 	float:left;
 	width: 60px;
 	height: 60px;
-	margin-left: 20px;
-    margin-top: 20px;
+	margin: 10px;
+    border:1px solid #ccc;
 }
 .commo_info_img ul li img{
 	width: 60px;
@@ -251,6 +275,9 @@ a{
 }
 #numAdd{
 	margin-right:5px;
+}
+#goodsNum{
+	text-align: center;
 }
 .commo_info_number ul input{
 	height: 20px;
@@ -559,4 +586,7 @@ a{
 .right_aside a:first-child{
     background: #cc0000;
     color:#fff;
+}
+#welcome{
+	display: none;
 }

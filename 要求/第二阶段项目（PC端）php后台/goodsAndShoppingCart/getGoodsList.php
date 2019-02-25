@@ -3,10 +3,10 @@
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","root");
+	$conn = mysql_connect("localhost","root","qianfeng");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("mysjku",$conn)){
+	if(!mysql_select_db("shoppingcenter",$conn)){
 		die("数据库选择失败".mysql_error());
 	}
 	

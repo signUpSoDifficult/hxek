@@ -1,4 +1,6 @@
 *.py
 *.gitignore
 *.md
-*-要求
+/要求/
+/node_modules/
+*.json

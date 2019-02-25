@@ -32,12 +32,16 @@ $(function(){
 								alert("用户名或密码错误");
 							}else{
 								alert("登录成功");
+								let userinfo=$("#usernamed").val()+"+"+$("#userpassd").val()
+								saveCookie("key",userinfo,7);
+								
 								$(".cover").css("display","none");
 								$(".land").css("display","none");
+								$("#welcome").css("display","block");
 								$(".dengLu").css("display","none");
 								$(".zhuCe").css("display","none");
-								$("#welcome").css("display","block");
 								$("#welcome").html("欢迎您"+$("#usernamed").val());
+
 							}
 				});
 			}else{
@@ -45,4 +49,15 @@ $(function(){
 			}
 			
 		});
-	});
+});
+
+
+
+
+function saveCookie(key,value,dayCount) {
+	//1、定义日期
+	var d = new Date();
+	d.setDate(d.getDate()+dayCount);
+	//2、保存cookie
+	document.cookie = key+"="+escape(value)+";expires="+d.toGMTString();
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

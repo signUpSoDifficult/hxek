@@ -1,0 +1,141 @@
+@charset "utf-8";
+/*css document*/
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑",Arial;
+	background:#f4f4f4;
+}
+ul,ol{
+	list-style:none;
+}
+img{
+	border: 0;
+}
+a{
+	text-decoration: none;
+	color:#545454;
+}
+/*contant*/
+.rates{
+	width: 100%;
+}
+.rate,.mycar,.goodslist{
+	width: 1100px;
+	height: 100px;
+	margin:0 auto;
+}
+.rate img{
+	padding:40px 0 0 720px; 
+}
+.mycars{
+	width: 100%;
+}
+.mycar{
+	height: 50px;
+	font-size: 20px;
+	line-height: 60px;
+	text-indent: 10px;
+}
+.goodslist{
+	background: #fff;
+	padding:20px;
+	height: auto;
+}
+.goodslist_head{
+	height: 30px;
+	border-bottom:1px solid #d9d6d6;
+	padding: 10px;
+}
+.goodslist_head>span{
+	font-size: 12px;
+	color: #545050;
+}
+.goodslist_head>span:nth-child(1){
+	padding-left: 20px;
+	padding-right: 200px;
+	height: 16px;
+}
+.goodslist_head>span:nth-child(1) input{
+    vertical-align: -2px;
+}
+.goodslist_head>span:nth-child(2){
+	padding-right: 268px;
+}
+.goodslist_head>span:nth-child(3){
+	padding-right: 130px;
+}
+.goodslist_head>span:nth-child(4){
+	padding-right: 130px;
+}
+.goodslist_foot{
+	height: 100px;
+}
+.goodslist ul>li{
+	height: 104px;
+	font-size: 12px;
+	border-bottom: 1px solid #ccc;
+}
+.goodslist ul>li>span{
+	display: block;
+	float: left;
+}
+.goodslist ul>li>span:nth-child(1){
+	padding-left: 31px;
+    margin-top: 46px;
+}
+.goodslist ul>li>span:nth-child(2){
+    vertical-align: -43px;
+    padding-left: 200px;
+    width: 319px;
+}
+.goodslist ul>li>span:nth-child(3){
+    padding-top: 47px;
+	font-weight: 600;
+	    width: 150px;
+}
+.goodslist ul>li>span:nth-child(4){
+    padding-top: 49px;
+    width: 175px;
+}
+.goodslist ul>li>span:nth-child(5){
+    padding-top:50px;
+}
+.foot_count{
+	float: right;
+	font-size: 12px;
+	padding: 22px 20px  0 ;
+}
+.foot_count span:nth-child(1){
+	font-size:16px;
+	color:#f06a6a;
+}
+.foot_count span:nth-child(2),.foot_count span:nth-child(3){
+	font-size:26px;
+	color:#df1717;
+	vertical-align: -4px;
+}
+.foot_btn01{
+	float: right;
+    width: 126px;
+    height: 40px;
+    background: #bf0e0e;
+    margin: 60px -240px 20px 20px;
+    text-align:center;
+    line-height: 40px;
+    border:5px; 
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.addcls,.reduceCls{
+	padding: 2px 5px;
+	border:1px solid #9a9898;
+	background: #f7f7f7;
+	cursor: pointer;
+}
+.delete{
+	cursor: pointer;
+}

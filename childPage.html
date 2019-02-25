@@ -5,9 +5,9 @@
 	<title>详情</title>
 	<link rel="stylesheet" type="text/css" href="css/HXEKindex.css"/>
 	<link rel="stylesheet" type="text/css" href="css/childPage.css"/>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script><!-- 
 	<script type="text/javascript" src="js/login.js"></script>
-	<script type="text/javascript" src="js/land.js"></script>
+	<script type="text/javascript" src="js/land.js"></script> -->
 	<script type="text/javascript" src="js/scroll.js"></script>
 </head>
 <body>
@@ -16,8 +16,9 @@
 		<div class="header">
 			<p>您好~欢迎您来到鸿星尔克官方商城！</p>
 			<ul>
-				<li>[<a class="dengLu" href="javascript:;">请登录</a>]</li>
-				<li>[<a class="zhuCe" href="javascript:;">免费注册</a>]</li>
+				<li><a class="dengLu" href="javascript:;">[请登录]</a></li>
+				<li><a class="zhuCe" href="javascript:;">[免费注册]</a></li>
+				<li ><a id="welcome" href="javascript:;"></a></li>
 				<li><a class="dengLu" href="javascript:;">我的鸿星尔克</a></li>
 				<li><a class="dengLu" href="javascript:;">我的购物车（<span>0</span>）</a></li>
 			</ul>
@@ -146,12 +147,16 @@
 			<div class="commo">
 				<div class="commo_info">
 					<div class="commo_info_img">
-						<div><img class="big_img" src="img/xiangqing.jpg" alt=""></div>
-						<ul>
-							<li><a href="javascript:;"><img src="img/xiangqing01.jpg" alt=""></a></li>
-							<li><a href="javascript:;"><img src="img/xiangqing01.jpg" alt=""></a></li>
-							<li><a href="javascript:;"><img src="img/xiangqing01.jpg" alt=""></a></li>
-							<li><a href="javascript:;"><img src="img/xiangqing01.jpg" alt=""></a></li>
+						<div id="small">
+							<div id="mask"></div>
+							<div id="big"></div>
+						</div>
+						<ul id="imgUl">
+							<li><a href="javascript:;"><img src="img/paoxie01.png" alt=""></a></li>
+							<li><a href="javascript:;"><img src="img/paoxie02.png" alt=""></a></li>
+							<li><a href="javascript:;"><img src="img/paoxie03.png" alt=""></a></li>
+							<li><a href="javascript:;"><img src="img/paoxie04.png" alt=""></a></li>
+							<li><a href="javascript:;"><img src="img/paoxie05.png" alt=""></a></li>
 						</ul>
 						<p>
 							<a href="javascript:;">分享</a>
@@ -165,12 +170,12 @@
 							 <div class="commo_info_price_now"> 
 								<span>促销价：</span>
 								<span>￥</span>
-								<span>171.00</span>
+								<span id="price"></span>
 							</div>
 							<div class="commo_info_price_dp">
 								<span>吊牌价：</span>
 								<span>￥</span>
-								<span>399.00</span>
+								<span >399.00</span>
 								<span>降57.14%</span>
 							</div>
 						</div>
@@ -202,7 +207,7 @@
 							</div>
 							<div class="commo_info_size">
 								<div class="commo_info_repeat">尺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</div>
-								<ul>
+								<ul id="commonSize">
 									<li>2XL</li>
 									<li>3XL</li>
 									<li>4XL</li>
@@ -213,16 +218,16 @@
 							</div>
 							<div class="commo_info_mysize">
 								<div class="commo_info_repeat">已&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选:</div>
-								<span>41</span>
+								<span id="mySize">41</span>
 							</div>
 							<div class="commo_info_number">
 								<div class="commo_info_repeat">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量:</div>
 								<ul>
 									<li>
 										<div class="commo_info_aa">
-											<span id="numSub">-</span>
-											<input type="text" value="1"/>
-											<span id="numAdd">+</span>件
+											<a id="numSub" href="javascript:;">-</a>
+											<input id="goodsNum" type="text" value="0"/>
+											<a href="javascript:;" id="numAdd">+</a>件
 										</div>
 									</li>
 									<li>
@@ -232,7 +237,7 @@
 							</div>
 							<div class="commo_info_btn">
 								<input type="button" value="立即购买"/>
-								<input type="button" value="加入购物车"/>
+								<input id="btn01" type="button" value="加入购物车"/>
 							</div>
 						</div>
 						<!-- 服务承诺 -->
@@ -458,6 +463,7 @@
 	<div class="cover">
 		
 	</div>
+
 	<!-- 注册页面 -->
 	<div class="login">
 		<div class="logins">
@@ -466,40 +472,33 @@
 			<div class="formList">
 				<div class="form-group">
 					<div class="login_input">
-						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="账号/手机">
+						<input type="email" class="form-control" id="usernamez" placeholder="账号/手机">
 					</div>
-    				<span></span>
+    				<span id="usernamezs"></span>
 			 	</div>
 			 	
 			 	<div class="form-group">
 			 		<div class="login_input">
-			 			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+			 			<input id="passwordz" type="password" class="form-control" placeholder="密码">
 			 		</div>
 			    	<span></span>
 			 	</div>
 			 	<div class="form-group">
 			 		<div class="login_input">
-			 			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="再次输入密码">
+			 			<input id="rpasswordz" type="password" class="form-control" placeholder="再次输入密码">
 			 		</div>
-			    	<span></span>
+			    	<span id="rpasswordzs"></span>
 			 	</div>
 			 	<div class="form-group">
 			 		<div class="login_input">
-			 			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="验证码">
-			 		</div>
-    				<div class="form-group-reg"></div>
-    				<span></span>
-			 	</div>
-			 	<div class="form-group">
-			 		<div class="login_input">
-						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="手机验证码">
+						<input type="email" class="form-control" placeholder="手机验证码">
 			 		</div>
     				<a class="form-group-sjreg" href="javascript:;">发送验证码</a>
     				<span></span>
 			 	</div>
-			 	<button type="button" class="btn-primary">注&nbsp;&nbsp;册</button>
+			 	<button id="btn_login" type="button" class="btn-primary">注&nbsp;&nbsp;册</button>
 			</div>
-			<a href="javascript:;">我已有账号，现在登录</a>
+			<a i="toLand" href="javascript:;">我已有账号，现在登录</a>
 		</div>
 	</div>
 	<!-- 登录-->
@@ -510,22 +509,26 @@
 			<div class="formList">
 				<div class="form-group">
 					<div class="login_input">
-						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="账号/手机">
+						<input type="email" class="form-control" id="usernamed" placeholder="账号/手机">
 					</div>
     				<span></span>
 			 	</div>
 			 	<div class="form-group">
 			 		<div class="login_input">
-			 			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+			 			<input type="password" id="userpassd" class="form-control" placeholder="密码">
 			 		</div>
 			    	<span></span>
 			 	</div>
 			 	<div class="form-group">
 			 		<div class="login_input">
-			 			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="验证码">
+			 			<input type="email" id="userreg" class="form-control"  placeholder="验证码">
+			 			<input id="input_hid" type="hidden" value="hah"/>
 			 		</div>
-    				<div class="form-group-reg"></div>
-    				<span></span>
+    				<div class="form-group-reg">
+    					 <canvas width="101" height="33" id="verifyCanvas"></canvas>
+       					 <img id="code_img">
+    				</div>
+    				<span id="userregs"></span>
 			 	</div>
 			 	<div class="miMa">
 			 		<input type="checkbox" name="autologin"/>
@@ -542,3 +545,8 @@
 	</div>
 </body>
 </html>
+<!-- <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> -->
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/land.js"></script>
+<script type="text/javascript" src="js/magnifyingGlass.js"></script>
+<script type="text/javascript" src="js/childPage.js"></script>

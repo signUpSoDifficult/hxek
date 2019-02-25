@@ -47,6 +47,8 @@
 							alert("注册失败");
 						}else{
 							alert("注册成功");
+							let userinfo=$("#usernamez").val()+"+"+$("#passwordz").val()
+							saveCookie("key",userinfo,7);
 							$(".login").css("display","none");
 							$(".land").css("display","block");
 						}
@@ -55,3 +57,11 @@
 			}	
 		});
 	});
+
+function saveCookie(key,value,dayCount) {
+	//1、定义日期
+	var d = new Date();
+	d.setDate(d.getDate()+dayCount);
+	//2、保存cookie
+	document.cookie = key+"="+escape(value)+";expires="+d.toGMTString();
+}
